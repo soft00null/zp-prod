@@ -1,0 +1,67 @@
+{
+  "name": "zp-pune-whatsapp-bot",
+  "version": "2.0.0",
+  "description": "Enhanced WhatsApp chatbot for Zilla Panchayat Pune with OpenAI Function Calling, multilingual support, and advanced state management",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "setup-vector-store": "node scripts/setupVectorStore.js",
+    "update-vector-store": "node scripts/setupVectorStore.js update",
+    "init-knowledge-base": "node -e \"require('./src/services/knowledgeBaseService').initializeKnowledgeBaseFromFile()\"",
+    "test-functions": "node scripts/testFunctionCalling.js",
+    "validate-knowledge": "node scripts/validateKnowledgeBase.js",
+    "analytics": "node scripts/generateAnalytics.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "echo \"Deployment script here\"",
+    "backup-db": "node scripts/backupFirestore.js"
+  },
+  "engines": {
+    "node": ">=16.x"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "helmet": "^7.1.0",
+    "langdetect": "^0.2.1",
+    "openai": "^4.28.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.3"
+  },
+  "keywords": [
+    "whatsapp",
+    "chatbot",
+    "openai",
+    "function-calling",
+    "zilla-panchayat",
+    "pune",
+    "government",
+    "multilingual",
+    "firestore",
+    "state-management",
+    "vector-store",
+    "knowledge-base"
+  ],
+  "author": {
+    "name": "soft00null",
+    "email": "your-email@example.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/zp-pune-whatsapp-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/zp-pune-whatsapp-bot/issues"
+  },
+  "homepage": "https://github.com/your-username/zp-pune-whatsapp-bot#readme"
+}
